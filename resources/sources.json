@@ -1,0 +1,26 @@
+{
+  "movie_reviews.zip": {
+    "url": "https://raw.githubusercontent.com/nltk/nltk_data/550b6625bcef1f2abff2ff770a5a0d272c9c6b2a/packages/corpora/movie_reviews.zip",
+    "revision": "550b6625bcef1f2abff2ff770a5a0d272c9c6b2a",
+    "bytes": 4004848,
+    "sha256": "a41211ae685019137410268134db6a1a14428c89b671eb83056151a878539008"
+  },
+  "movie_reviews.xml": {
+    "url": "https://raw.githubusercontent.com/nltk/nltk_data/550b6625bcef1f2abff2ff770a5a0d272c9c6b2a/packages/corpora/movie_reviews.xml",
+    "revision": "550b6625bcef1f2abff2ff770a5a0d272c9c6b2a",
+    "bytes": 417,
+    "sha256": "c632dc0b8b807cf57f06cee3f42afa5e077e2a23294ed99af971b055635e77ef"
+  },
+  "vader_lexicon.txt": {
+    "url": "https://raw.githubusercontent.com/cjhutto/vaderSentiment/44fc044cd877310ee8278a0eadf34bcd50d41d06/vaderSentiment/vader_lexicon.txt",
+    "revision": "44fc044cd877310ee8278a0eadf34bcd50d41d06",
+    "bytes": 426786,
+    "sha256": "ec636f884f36b5de6a4d681b2f61c08c2ec90eeb440472033f3307d0d6fa8bc9"
+  },
+  "VADER-LICENSE.txt": {
+    "url": "https://raw.githubusercontent.com/cjhutto/vaderSentiment/44fc044cd877310ee8278a0eadf34bcd50d41d06/LICENSE.txt",
+    "revision": "44fc044cd877310ee8278a0eadf34bcd50d41d06",
+    "bytes": 1076,
+    "sha256": "b78925304c567623f14677bad66b8e305e7ddcaf7982c8d8411ce51c55a8bf51"
+  }
+}

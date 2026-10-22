@@ -1,0 +1,1212 @@
+{
+  "cases": 58,
+  "standard_cases": 50,
+  "scope_challenges": 8,
+  "metrics": {
+    "email": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.8333333333333334
+    },
+    "phone": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.8333333333333334
+    },
+    "date": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.8333333333333334
+    },
+    "money": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9090909090909091
+    },
+    "url": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9090909090909091
+    }
+  },
+  "results": [
+    {
+      "id": "email-01",
+      "text": "문의: user@example.test 로 부탁드립니다.",
+      "expected": [
+        {
+          "kind": "email",
+          "value": "user@example.test"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "email",
+          "raw": "user@example.test",
+          "value": "user@example.test",
+          "start": 4,
+          "end": 21
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "email-02",
+      "text": "수신자는 user.name@sub.example.co.kr 입니다.",
+      "expected": [
+        {
+          "kind": "email",
+          "value": "user.name@sub.example.co.kr"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "email",
+          "raw": "user.name@sub.example.co.kr",
+          "value": "user.name@sub.example.co.kr",
+          "start": 5,
+          "end": 32
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "email-03",
+      "text": "새 주소는 user+movie@example.test 입니다.",
+      "expected": [
+        {
+          "kind": "email",
+          "value": "user+movie@example.test"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "email",
+          "raw": "user+movie@example.test",
+          "value": "user+movie@example.test",
+          "start": 6,
+          "end": 29
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "email-04",
+      "text": "회신: User@EXAMPLE.TEST.",
+      "expected": [
+        {
+          "kind": "email",
+          "value": "User@example.test"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "email",
+          "raw": "User@EXAMPLE.TEST",
+          "value": "User@example.test",
+          "start": 4,
+          "end": 21
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "email-05",
+      "text": "연락처 (team-1@example.test)를 사용합니다.",
+      "expected": [
+        {
+          "kind": "email",
+          "value": "team-1@example.test"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "email",
+          "raw": "team-1@example.test",
+          "value": "team-1@example.test",
+          "start": 5,
+          "end": 24
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "email-06",
+      "text": "메일 one_two@example.test 확인.",
+      "expected": [
+        {
+          "kind": "email",
+          "value": "one_two@example.test"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "email",
+          "raw": "one_two@example.test",
+          "value": "one_two@example.test",
+          "start": 3,
+          "end": 23
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "email-07",
+      "text": "리뷰 안내 a.b.c@reviews.example.test 입니다.",
+      "expected": [
+        {
+          "kind": "email",
+          "value": "a.b.c@reviews.example.test"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "email",
+          "raw": "a.b.c@reviews.example.test",
+          "value": "a.b.c@reviews.example.test",
+          "start": 6,
+          "end": 32
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "email-08",
+      "text": "담당: first-last@example.test",
+      "expected": [
+        {
+          "kind": "email",
+          "value": "first-last@example.test"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "email",
+          "raw": "first-last@example.test",
+          "value": "first-last@example.test",
+          "start": 4,
+          "end": 27
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "email-09",
+      "text": "별칭 test99@example.test 로 발송합니다.",
+      "expected": [
+        {
+          "kind": "email",
+          "value": "test99@example.test"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "email",
+          "raw": "test99@example.test",
+          "value": "test99@example.test",
+          "start": 3,
+          "end": 22
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "email-10",
+      "text": "고객센터: contact@example.museum",
+      "expected": [
+        {
+          "kind": "email",
+          "value": "contact@example.museum"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "email",
+          "raw": "contact@example.museum",
+          "value": "contact@example.museum",
+          "start": 6,
+          "end": 28
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "phone-01",
+      "text": "가상번호 010-0000-1001로 문의하세요.",
+      "expected": [
+        {
+          "kind": "phone",
+          "value": "010-0000-1001"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "phone",
+          "raw": "010-0000-1001",
+          "value": "010-0000-1001",
+          "start": 5,
+          "end": 18
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "phone-02",
+      "text": "가상 서울 번호 02-000-1001 입니다.",
+      "expected": [
+        {
+          "kind": "phone",
+          "value": "02-000-1001"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "phone",
+          "raw": "02-000-1001",
+          "value": "02-000-1001",
+          "start": 9,
+          "end": 20
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "phone-03",
+      "text": "가상 지역 번호 031-0000-1001 입니다.",
+      "expected": [
+        {
+          "kind": "phone",
+          "value": "031-0000-1001"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "phone",
+          "raw": "031-0000-1001",
+          "value": "031-0000-1001",
+          "start": 9,
+          "end": 22
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "phone-04",
+      "text": "연락: 01000001002",
+      "expected": [
+        {
+          "kind": "phone",
+          "value": "010-0000-1002"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "phone",
+          "raw": "01000001002",
+          "value": "010-0000-1002",
+          "start": 4,
+          "end": 15
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "phone-05",
+      "text": "대표번호 02 0000 1002를 적습니다.",
+      "expected": [
+        {
+          "kind": "phone",
+          "value": "02-0000-1002"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "phone",
+          "raw": "02 0000 1002",
+          "value": "02-0000-1002",
+          "start": 5,
+          "end": 17
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "phone-06",
+      "text": "전화 031 000 1002 입니다.",
+      "expected": [
+        {
+          "kind": "phone",
+          "value": "031-000-1002"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "phone",
+          "raw": "031 000 1002",
+          "value": "031-000-1002",
+          "start": 3,
+          "end": 15
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "phone-07",
+      "text": "국가코드 +82-10-0000-1003 입니다.",
+      "expected": [
+        {
+          "kind": "phone",
+          "value": "010-0000-1003"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "phone",
+          "raw": "+82-10-0000-1003",
+          "value": "010-0000-1003",
+          "start": 5,
+          "end": 21
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "phone-08",
+      "text": "가상 번호 +82 2 000 1003 입니다.",
+      "expected": [
+        {
+          "kind": "phone",
+          "value": "02-000-1003"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "phone",
+          "raw": "+82 2 000 1003",
+          "value": "02-000-1003",
+          "start": 6,
+          "end": 20
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "phone-09",
+      "text": "담당번호 070.0000.1004를 확인합니다.",
+      "expected": [
+        {
+          "kind": "phone",
+          "value": "070-0000-1004"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "phone",
+          "raw": "070.0000.1004",
+          "value": "070-0000-1004",
+          "start": 5,
+          "end": 18
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "phone-10",
+      "text": "상담번호 051-000-1005 입니다.",
+      "expected": [
+        {
+          "kind": "phone",
+          "value": "051-000-1005"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "phone",
+          "raw": "051-000-1005",
+          "value": "051-000-1005",
+          "start": 5,
+          "end": 17
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "date-01",
+      "text": "예약일은 2024년 1월 15일 입니다.",
+      "expected": [
+        {
+          "kind": "date",
+          "value": "2024-01-15"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "date",
+          "raw": "2024년 1월 15일",
+          "value": "2024-01-15",
+          "start": 5,
+          "end": 17
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "date-02",
+      "text": "마감: 2024/01/16",
+      "expected": [
+        {
+          "kind": "date",
+          "value": "2024-01-16"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "date",
+          "raw": "2024/01/16",
+          "value": "2024-01-16",
+          "start": 4,
+          "end": 14
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "date-03",
+      "text": "행사일 2024-01-17입니다.",
+      "expected": [
+        {
+          "kind": "date",
+          "value": "2024-01-17"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "date",
+          "raw": "2024-01-17",
+          "value": "2024-01-17",
+          "start": 4,
+          "end": 14
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "date-04",
+      "text": "점검은 2024.1.18에 실시합니다.",
+      "expected": [
+        {
+          "kind": "date",
+          "value": "2024-01-18"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "date",
+          "raw": "2024.1.18",
+          "value": "2024-01-18",
+          "start": 4,
+          "end": 13
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "date-05",
+      "text": "윤년 날짜 2024-02-29 확인.",
+      "expected": [
+        {
+          "kind": "date",
+          "value": "2024-02-29"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "date",
+          "raw": "2024-02-29",
+          "value": "2024-02-29",
+          "start": 6,
+          "end": 16
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "date-06",
+      "text": "시작 2025년12월31일 입니다.",
+      "expected": [
+        {
+          "kind": "date",
+          "value": "2025-12-31"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "date",
+          "raw": "2025년12월31일",
+          "value": "2025-12-31",
+          "start": 3,
+          "end": 14
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "date-07",
+      "text": "종료일 2026/1/1 입니다.",
+      "expected": [
+        {
+          "kind": "date",
+          "value": "2026-01-01"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "date",
+          "raw": "2026/1/1",
+          "value": "2026-01-01",
+          "start": 4,
+          "end": 12
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "date-08",
+      "text": "예정일:2023-11-30",
+      "expected": [
+        {
+          "kind": "date",
+          "value": "2023-11-30"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "date",
+          "raw": "2023-11-30",
+          "value": "2023-11-30",
+          "start": 4,
+          "end": 14
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "date-09",
+      "text": "이전 기록 2000년 2월 29일 입니다.",
+      "expected": [
+        {
+          "kind": "date",
+          "value": "2000-02-29"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "date",
+          "raw": "2000년 2월 29일",
+          "value": "2000-02-29",
+          "start": 6,
+          "end": 18
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "date-10",
+      "text": "다음 일정 (2026-10-23)을 메모합니다.",
+      "expected": [
+        {
+          "kind": "date",
+          "value": "2026-10-23"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "date",
+          "raw": "2026-10-23",
+          "value": "2026-10-23",
+          "start": 7,
+          "end": 17
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "money-01",
+      "text": "예산은 10,000원입니다.",
+      "expected": [
+        {
+          "kind": "money",
+          "value": {
+            "amount_minor": 10000,
+            "currency": "KRW"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "money",
+          "raw": "10,000원",
+          "value": {
+            "amount_minor": 10000,
+            "currency": "KRW"
+          },
+          "start": 4,
+          "end": 11
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "money-02",
+      "text": "총금액 1억 2천만원 입니다.",
+      "expected": [
+        {
+          "kind": "money",
+          "value": {
+            "amount_minor": 120000000,
+            "currency": "KRW"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "money",
+          "raw": "1억 2천만원",
+          "value": {
+            "amount_minor": 120000000,
+            "currency": "KRW"
+          },
+          "start": 4,
+          "end": 11
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "money-03",
+      "text": "참가비 5000원을 확인합니다.",
+      "expected": [
+        {
+          "kind": "money",
+          "value": {
+            "amount_minor": 5000,
+            "currency": "KRW"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "money",
+          "raw": "5000원",
+          "value": {
+            "amount_minor": 5000,
+            "currency": "KRW"
+          },
+          "start": 4,
+          "end": 9
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "money-04",
+      "text": "비용 2만 5천원 입니다.",
+      "expected": [
+        {
+          "kind": "money",
+          "value": {
+            "amount_minor": 25000,
+            "currency": "KRW"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "money",
+          "raw": "2만 5천원",
+          "value": {
+            "amount_minor": 25000,
+            "currency": "KRW"
+          },
+          "start": 3,
+          "end": 9
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "money-05",
+      "text": "기본료 3백50원 입니다.",
+      "expected": [
+        {
+          "kind": "money",
+          "value": {
+            "amount_minor": 350,
+            "currency": "KRW"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "money",
+          "raw": "3백50원",
+          "value": {
+            "amount_minor": 350,
+            "currency": "KRW"
+          },
+          "start": 4,
+          "end": 9
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "money-06",
+      "text": "금액 1.5만원을 준비합니다.",
+      "expected": [
+        {
+          "kind": "money",
+          "value": {
+            "amount_minor": 15000,
+            "currency": "KRW"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "money",
+          "raw": "1.5만원",
+          "value": {
+            "amount_minor": 15000,
+            "currency": "KRW"
+          },
+          "start": 3,
+          "end": 8
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "money-07",
+      "text": "표시 가격은 $100 입니다.",
+      "expected": [
+        {
+          "kind": "money",
+          "value": {
+            "amount_minor": 10000,
+            "currency": "USD"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "money",
+          "raw": "$100",
+          "value": {
+            "amount_minor": 10000,
+            "currency": "USD"
+          },
+          "start": 7,
+          "end": 11
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "money-08",
+      "text": "달러 금액 USD 1,200을 기입합니다.",
+      "expected": [
+        {
+          "kind": "money",
+          "value": {
+            "amount_minor": 120000,
+            "currency": "USD"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "money",
+          "raw": "USD 1,200",
+          "value": {
+            "amount_minor": 120000,
+            "currency": "USD"
+          },
+          "start": 6,
+          "end": 15
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "money-09",
+      "text": "합계는 $12.50입니다.",
+      "expected": [
+        {
+          "kind": "money",
+          "value": {
+            "amount_minor": 1250,
+            "currency": "USD"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "money",
+          "raw": "$12.50",
+          "value": {
+            "amount_minor": 1250,
+            "currency": "USD"
+          },
+          "start": 4,
+          "end": 10
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "money-10",
+      "text": "안내 금액 25달러 입니다.",
+      "expected": [
+        {
+          "kind": "money",
+          "value": {
+            "amount_minor": 2500,
+            "currency": "USD"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "money",
+          "raw": "25달러",
+          "value": {
+            "amount_minor": 2500,
+            "currency": "USD"
+          },
+          "start": 6,
+          "end": 10
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "url-01",
+      "text": "링크 https://example.test/path?query=value 입니다.",
+      "expected": [
+        {
+          "kind": "url",
+          "value": "https://example.test/path?query=value"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "url",
+          "raw": "https://example.test/path?query=value",
+          "value": "https://example.test/path?query=value",
+          "start": 3,
+          "end": 40
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "url-02",
+      "text": "주소 http://www.example.test 를 봅니다.",
+      "expected": [
+        {
+          "kind": "url",
+          "value": "http://www.example.test"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "url",
+          "raw": "http://www.example.test",
+          "value": "http://www.example.test",
+          "start": 3,
+          "end": 26
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "url-03",
+      "text": "문서 https://sub.example.test/a/b#section 입니다.",
+      "expected": [
+        {
+          "kind": "url",
+          "value": "https://sub.example.test/a/b#section"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "url",
+          "raw": "https://sub.example.test/a/b#section",
+          "value": "https://sub.example.test/a/b#section",
+          "start": 3,
+          "end": 39
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "url-04",
+      "text": "참고 (https://example.test/a).",
+      "expected": [
+        {
+          "kind": "url",
+          "value": "https://example.test/a"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "url",
+          "raw": "https://example.test/a).",
+          "value": "https://example.test/a",
+          "start": 4,
+          "end": 28
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "url-05",
+      "text": "검색 https://example.test/?q=a&sort=desc 입니다.",
+      "expected": [
+        {
+          "kind": "url",
+          "value": "https://example.test/?q=a&sort=desc"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "url",
+          "raw": "https://example.test/?q=a&sort=desc",
+          "value": "https://example.test/?q=a&sort=desc",
+          "start": 3,
+          "end": 38
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "url-06",
+      "text": "포트 주소 https://example.test:8443/api/v1 을 기록.",
+      "expected": [
+        {
+          "kind": "url",
+          "value": "https://example.test:8443/api/v1"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "url",
+          "raw": "https://example.test:8443/api/v1",
+          "value": "https://example.test:8443/api/v1",
+          "start": 6,
+          "end": 38
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "url-07",
+      "text": "대소문자 HTTPS://EXAMPLE.TEST/Path?Q=1#A 입니다.",
+      "expected": [
+        {
+          "kind": "url",
+          "value": "https://example.test/Path?Q=1#A"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "url",
+          "raw": "HTTPS://EXAMPLE.TEST/Path?Q=1#A",
+          "value": "https://example.test/Path?Q=1#A",
+          "start": 5,
+          "end": 36
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "url-08",
+      "text": "인코딩 경로 https://example.test/a%20b 를 엽니다.",
+      "expected": [
+        {
+          "kind": "url",
+          "value": "https://example.test/a%20b"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "url",
+          "raw": "https://example.test/a%20b",
+          "value": "https://example.test/a%20b",
+          "start": 7,
+          "end": 33
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "url-09",
+      "text": "괄호 경로 https://example.test/a(b) 입니다.",
+      "expected": [
+        {
+          "kind": "url",
+          "value": "https://example.test/a(b)"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "url",
+          "raw": "https://example.test/a(b)",
+          "value": "https://example.test/a(b)",
+          "start": 6,
+          "end": 31
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "url-10",
+      "text": "끝 경로 https://example.test/reviews/ 를 확인.",
+      "expected": [
+        {
+          "kind": "url",
+          "value": "https://example.test/reviews/"
+        }
+      ],
+      "predicted": [
+        {
+          "kind": "url",
+          "raw": "https://example.test/reviews/",
+          "value": "https://example.test/reviews/",
+          "start": 5,
+          "end": 34
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "challenge-01",
+      "text": "국제화 이메일 이름@예시.한국 입니다.",
+      "expected": [
+        {
+          "kind": "email",
+          "value": "이름@예시.한국"
+        }
+      ],
+      "challenge": "Unicode local/domain",
+      "predicted": [],
+      "success": false
+    },
+    {
+      "id": "challenge-02",
+      "text": "인용 local 주소 \"first last\"@example.test 입니다.",
+      "expected": [
+        {
+          "kind": "email",
+          "value": "\"first last\"@example.test"
+        }
+      ],
+      "challenge": "quoted local-part",
+      "predicted": [],
+      "success": false
+    },
+    {
+      "id": "challenge-03",
+      "text": "괄호 번호 010(0000)1006 입니다.",
+      "expected": [
+        {
+          "kind": "phone",
+          "value": "010-0000-1006"
+        }
+      ],
+      "challenge": "parenthesized separator",
+      "predicted": [],
+      "success": false
+    },
+    {
+      "id": "challenge-04",
+      "text": "해외 가상 번호 +1-202-555-0100 입니다.",
+      "expected": [
+        {
+          "kind": "phone",
+          "value": "+1-202-555-0100"
+        }
+      ],
+      "challenge": "non-Korean country code",
+      "predicted": [],
+      "success": false
+    },
+    {
+      "id": "challenge-05",
+      "text": "영문 날짜 Jan 15, 2024 입니다.",
+      "expected": [
+        {
+          "kind": "date",
+          "value": "2024-01-15"
+        }
+      ],
+      "challenge": "month name",
+      "predicted": [],
+      "success": false
+    },
+    {
+      "id": "challenge-06",
+      "text": "일월연도 15/01/2024 입니다.",
+      "expected": [
+        {
+          "kind": "date",
+          "value": "2024-01-15"
+        }
+      ],
+      "challenge": "day-first date",
+      "predicted": [],
+      "success": false
+    },
+    {
+      "id": "challenge-07",
+      "text": "한글 금액 삼만원 입니다.",
+      "expected": [
+        {
+          "kind": "money",
+          "value": {
+            "amount_minor": 30000,
+            "currency": "KRW"
+          }
+        }
+      ],
+      "challenge": "Korean numeral words",
+      "predicted": [],
+      "success": false
+    },
+    {
+      "id": "challenge-08",
+      "text": "프로토콜 생략 www.example.test/path 입니다.",
+      "expected": [
+        {
+          "kind": "url",
+          "value": "https://www.example.test/path"
+        }
+      ],
+      "challenge": "scheme omitted",
+      "predicted": [],
+      "success": false
+    }
+  ],
+  "masking_example": "[RESIDENT] / [CARD] / [ADDRESS] / [EMAIL] / [PHONE]"
+}

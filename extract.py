@@ -38,6 +38,7 @@ def korean_amount(raw):
     raw = raw.replace(",", "").replace(" ", "").removesuffix("원")
     total = Decimal(0)
     section = Decimal(0)
+    section_provided = False
     number = None
     for token in re.findall(r"\d+(?:\.\d+)?|[억만천백십]", raw):
         if token[0].isdigit():
@@ -48,11 +49,15 @@ def korean_amount(raw):
                 "백": 100,
                 "십": 10,
             }[token]
+            section_provided = True
             number = None
         else:
             subtotal = section + (number if number is not None else 0)
-            total += (subtotal or 1) * {"만": 10000, "억": 100000000}[token]
+            # 명시한 0과 숫자 생략 시의 1을 구분한다.
+            multiplier = subtotal if section_provided or number is not None else 1
+            total += multiplier * {"만": 10000, "억": 100000000}[token]
             section = Decimal(0)
+            section_provided = False
             number = None
     value = total + section + (number if number is not None else 0)
     if value != value.to_integral_value():

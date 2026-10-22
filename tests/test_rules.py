@@ -18,6 +18,17 @@ class RulesTests(unittest.TestCase):
         self.assertEqual(extract("+82-10-0000-1001")[0]["value"], "010-0000-1001")
         self.assertEqual(extract("2024년 2월 29일")[0]["value"], "2024-02-29")
 
+    def test_explicit_zero_in_korean_units(self):
+        for text, expected in (
+            ("0만원", 0), ("0억원", 0), ("0천만원", 0),
+            ("1억 0만원", 100000000), ("1억 0천 0원", 100000000),
+        ):
+            self.assertEqual(korean_amount(text), expected)
+            self.assertEqual(
+                extract(text)[0]["value"],
+                {"amount_minor": expected, "currency": "KRW"},
+            )
+
     def test_dollar_cents_and_url_parentheses(self):
         self.assertEqual(
             extract("$12.50.")[0]["value"], {"amount_minor": 1250, "currency": "USD"}

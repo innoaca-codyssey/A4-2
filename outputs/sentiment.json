@@ -1,0 +1,1331 @@
+{
+  "test_rows": 400,
+  "train_pool": 1600,
+  "split": "same A4-1 stratified fixed split",
+  "variants": {
+    "base_dictionary": {
+      "accuracy": 0.5975,
+      "f1": 0.7034990791896869,
+      "macro_f1": 0.5385199676104077,
+      "confusion_matrix": [
+        [
+          48,
+          152
+        ],
+        [
+          9,
+          191
+        ]
+      ]
+    },
+    "domain_dictionary": {
+      "accuracy": 0.5975,
+      "f1": 0.7034990791896869,
+      "macro_f1": 0.5385199676104077,
+      "confusion_matrix": [
+        [
+          48,
+          152
+        ],
+        [
+          9,
+          191
+        ]
+      ]
+    },
+    "context_rules": {
+      "accuracy": 0.62,
+      "f1": 0.7132075471698113,
+      "macro_f1": 0.5751222921034241,
+      "confusion_matrix": [
+        [
+          59,
+          141
+        ],
+        [
+          11,
+          189
+        ]
+      ]
+    }
+  },
+  "label_budgets": [
+    {
+      "labeled_train_rows": 10,
+      "tfidf": {
+        "accuracy": 0.585,
+        "f1": 0.668,
+        "macro_f1": 0.5573333333333333,
+        "confusion_matrix": [
+          [
+            67,
+            133
+          ],
+          [
+            33,
+            167
+          ]
+        ]
+      },
+      "fixed_rules": {
+        "accuracy": 0.62,
+        "f1": 0.7132075471698113,
+        "macro_f1": 0.5751222921034241,
+        "confusion_matrix": [
+          [
+            59,
+            141
+          ],
+          [
+            11,
+            189
+          ]
+        ]
+      }
+    },
+    {
+      "labeled_train_rows": 100,
+      "tfidf": {
+        "accuracy": 0.6975,
+        "f1": 0.6807387862796834,
+        "macro_f1": 0.6966639299569439,
+        "confusion_matrix": [
+          [
+            150,
+            50
+          ],
+          [
+            71,
+            129
+          ]
+        ]
+      },
+      "fixed_rules": {
+        "accuracy": 0.62,
+        "f1": 0.7132075471698113,
+        "macro_f1": 0.5751222921034241,
+        "confusion_matrix": [
+          [
+            59,
+            141
+          ],
+          [
+            11,
+            189
+          ]
+        ]
+      }
+    },
+    {
+      "labeled_train_rows": 1000,
+      "tfidf": {
+        "accuracy": 0.82,
+        "f1": 0.8208955223880597,
+        "macro_f1": 0.8199954998874972,
+        "confusion_matrix": [
+          [
+            163,
+            37
+          ],
+          [
+            35,
+            165
+          ]
+        ]
+      },
+      "fixed_rules": {
+        "accuracy": 0.62,
+        "f1": 0.7132075471698113,
+        "macro_f1": 0.5751222921034241,
+        "confusion_matrix": [
+          [
+            59,
+            141
+          ],
+          [
+            11,
+            189
+          ]
+        ]
+      }
+    }
+  ],
+  "misclassified": [
+    {
+      "id": "review-0020",
+      "row": 20,
+      "true": 0,
+      "predicted": 1,
+      "score": 10.1,
+      "snippet": "good bad humor not made made not about evil so much movie into scenes like while after making if see girl seeing into off makes look like just another action but doesn't even work sequences look too scenes looks like think make other movie wonderful but too actor movies like effects story story isn't even interesting character if but even watching man more interesting poor movie still think worst so although never even before into brilliant few people liked other book film yet after movie making people think superior adaptation compelling story strong ever but just not just awful worse",
+      "strong_terms": [
+        {
+          "token": "worst",
+          "position": 559,
+          "score": -4.65,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "brilliant",
+          "position": 628,
+          "score": 4.199999999999999,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "wonderful",
+          "position": 439,
+          "score": 4.050000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "superior",
+          "position": 699,
+          "score": 3.75,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "strong",
+          "position": 710,
+          "score": 3.4499999999999997,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "poor",
+          "position": 540,
+          "score": -3.1500000000000004,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "worse",
+          "position": 741,
+          "score": -3.1500000000000004,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "awful",
+          "position": 738,
+          "score": -3.0,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "liked",
+          "position": 661,
+          "score": 2.7,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "interesting",
+          "position": 484,
+          "score": -2.55,
+          "negations": 1,
+          "factor": 1.5
+        }
+      ]
+    },
+    {
+      "id": "review-0466",
+      "row": 466,
+      "true": 0,
+      "predicted": 1,
+      "score": 11.069999999999999,
+      "snippet": "time movie rather opening sequence rather things story audience into very but enjoy experience during off more else if but into if still after between within more even so film not even successful version even so poor while most films theme film plot sequences no more film seem else actors film acting barely film out worked really seems well production film opening sequence quite good too another however people enjoy seeing friends over film not film still",
+      "strong_terms": [
+        {
+          "token": "successful",
+          "position": 251,
+          "score": 4.199999999999999,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "good",
+          "position": 411,
+          "score": 3.4199999999999995,
+          "negations": 0,
+          "factor": 1.7999999999999998
+        },
+        {
+          "token": "enjoy",
+          "position": 120,
+          "score": 3.3000000000000003,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "enjoy",
+          "position": 442,
+          "score": 3.3000000000000003,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "poor",
+          "position": 274,
+          "score": -3.1500000000000004,
+          "negations": 0,
+          "factor": 1.5
+        }
+      ]
+    },
+    {
+      "id": "review-0484",
+      "row": 484,
+      "true": 0,
+      "predicted": 1,
+      "score": 26.05,
+      "snippet": "good most bad good performance after actor much through like cruel contemptuous performance acting film screenplay made character start about neither nor director but seems shouldn't over seeing really isn't much but look sound like look see boy like but performance not too bad plot well bad great not even about people after very well man into out much done many but woman while man work many thriller just doesn't seem plot movies before worse feels like film even fresh like out before so without characters seemed up rather thing even emotional feel like scene didn't like much even more seemed movies worked because ending ending never if before character most before too end like but didn't se",
+      "strong_terms": [
+        {
+          "token": "love",
+          "position": 824,
+          "score": 4.800000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "great",
+          "position": 258,
+          "score": 4.65,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "brilliant",
+          "position": 984,
+          "score": 4.199999999999999,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "bad",
+          "position": 237,
+          "score": 3.75,
+          "negations": 1,
+          "factor": 1.5
+        },
+        {
+          "token": "bad",
+          "position": 252,
+          "score": -3.75,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "bad",
+          "position": 1077,
+          "score": -3.75,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "bad",
+          "position": 1130,
+          "score": -3.75,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "stupid",
+          "position": 1094,
+          "score": -3.5999999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "wasted",
+          "position": 1003,
+          "score": -3.3000000000000003,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "worse",
+          "position": 447,
+          "score": -3.1500000000000004,
+          "negations": 0,
+          "factor": 1.5
+        }
+      ]
+    },
+    {
+      "id": "review-1525",
+      "row": 1525,
+      "true": 1,
+      "predicted": 0,
+      "score": -4.649999999999999,
+      "snippet": "out cinematography comedy but anger sad story between because within out film about haven't yet done if wasn't tone movie but sorrow people until but movie about people else movies out old but movie just violent comedy unpleasant ugly dull director characters so seems if almost into no more desperate love almost another out story more more more but great not but not if despite performances because shows woman worked long man out great dialogue if most films short story but rather barely minute many movies less less less but watch again not not not movie audience because cannot no characters best just not make less fascinating less shame because movie because people most movies into happy end",
+      "strong_terms": [
+        {
+          "token": "love",
+          "position": 512,
+          "score": 4.800000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "best",
+          "position": 918,
+          "score": 4.800000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "great",
+          "position": 575,
+          "score": 4.65,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "great",
+          "position": 759,
+          "score": 4.65,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "violent",
+          "position": 391,
+          "score": -4.35,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "anger",
+          "position": 66,
+          "score": -4.050000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "happy",
+          "position": 1000,
+          "score": 4.050000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "fascinating",
+          "position": 947,
+          "score": 3.75,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "sorrow",
+          "position": 273,
+          "score": -3.5999999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "ugly",
+          "position": 410,
+          "score": -3.4499999999999997,
+          "negations": 0,
+          "factor": 1.5
+        }
+      ]
+    },
+    {
+      "id": "review-0105",
+      "row": 105,
+      "true": 0,
+      "predicted": 1,
+      "score": 24.974999999999998,
+      "snippet": "series never before movie happy won't film after same man not plot man over within not once during film not very good not up enjoy action sequences more few minutes time think lovely scenes other part film action adventure another hour film boring effects interesting but very plot weak end much script because people maybe most effects don't show up until hour even don't see hadn't perhaps so much more movies cannot but onto bad movie bad movie very much enjoy lovely performance adorable seemed up scene hardly fun bad but much best plot not see movie again scene lovely up but movie about film films title once down drama actress up film director worked movies love up successful start over even",
+      "strong_terms": [
+        {
+          "token": "best",
+          "position": 463,
+          "score": 4.800000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "love",
+          "position": 665,
+          "score": 4.800000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "lovely",
+          "position": 408,
+          "score": 4.199999999999999,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "lovely",
+          "position": 503,
+          "score": 4.199999999999999,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "successful",
+          "position": 681,
+          "score": 4.199999999999999,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "lovely",
+          "position": 792,
+          "score": 4.199999999999999,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "bad",
+          "position": 385,
+          "score": -3.75,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "bad",
+          "position": 389,
+          "score": -3.75,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "bad",
+          "position": 445,
+          "score": -3.75,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "fun",
+          "position": 439,
+          "score": 3.4499999999999997,
+          "negations": 0,
+          "factor": 1.5
+        }
+      ]
+    },
+    {
+      "id": "review-0230",
+      "row": 230,
+      "true": 0,
+      "predicted": 1,
+      "score": 43.95,
+      "snippet": "film time great film even still powerful out still romantic another very very despite about before but out after like wasn't liked saw time original saw good film but film like out makes happy once but after while annoying just well film not not look screen but insulted time too many plot just aren't if comedy drama scene see scene between see worst scene between funny but like most funniest end annoying make like once shows no no action other superior films scene between out isn't about boring more interesting didn't even see plot if interesting but not aren't out not stupid too same but about under nice time don't if out don't if just out stupid think time more person second leading think",
+      "strong_terms": [
+        {
+          "token": "best",
+          "position": 809,
+          "score": 4.800000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "worst",
+          "position": 298,
+          "score": -4.65,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "great",
+          "position": 875,
+          "score": 4.65,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "great",
+          "position": 922,
+          "score": 4.65,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "loved",
+          "position": 883,
+          "score": 4.35,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "happy",
+          "position": 168,
+          "score": 4.050000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "funniest",
+          "position": 331,
+          "score": 3.9000000000000004,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "superior",
+          "position": 394,
+          "score": 3.75,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "stupid",
+          "position": 537,
+          "score": -3.5999999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "stupid",
+          "position": 640,
+          "score": -3.5999999999999996,
+          "negations": 0,
+          "factor": 1.5
+        }
+      ]
+    },
+    {
+      "id": "review-0339",
+      "row": 339,
+      "true": 0,
+      "predicted": 1,
+      "score": 15.774999999999999,
+      "snippet": "film original film same title like bad horror film yet bad horror films very entertaining just film better another film horror old makes no horror movie slightly more successful can't think another film cast cast thriller into entertaining horror character actor seems making movie ridiculous don't why but entertaining see quality actors bad movies more rather too cast however good humorous while film audience second into story suspense ending really movie too just about if if movie over better more perhaps better better",
+      "strong_terms": [
+        {
+          "token": "bad",
+          "position": 334,
+          "score": -3.75,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "entertaining",
+          "position": 328,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "good",
+          "position": 390,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "better",
+          "position": 493,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "better",
+          "position": 510,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "better",
+          "position": 516,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "humorous",
+          "position": 391,
+          "score": 2.4000000000000004,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "entertaining",
+          "position": 147,
+          "score": 1.4249999999999998,
+          "negations": 0,
+          "factor": 0.75
+        },
+        {
+          "token": "successful",
+          "position": 234,
+          "score": 1.4,
+          "negations": 0,
+          "factor": 0.5
+        },
+        {
+          "token": "bad",
+          "position": 136,
+          "score": -1.25,
+          "negations": 0,
+          "factor": 0.5
+        }
+      ]
+    },
+    {
+      "id": "review-0782",
+      "row": 782,
+      "true": 0,
+      "predicted": 1,
+      "score": 4.799999999999999,
+      "snippet": "out feeling up old screen role another but if few dialogue joyous other up most movie scenes well just action other movies scenes between scenes character development better script time through because movie off between over whose movie perhaps more else villain no end don't even seem audience no about interesting villain made seem fun evil roles action films magnificent so many satisfying action film shame out if see",
+      "strong_terms": [
+        {
+          "token": "evil",
+          "position": 456,
+          "score": -5.1,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "joyous",
+          "position": 159,
+          "score": 4.65,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "magnificent",
+          "position": 481,
+          "score": 4.35,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "villain",
+          "position": 387,
+          "score": -3.9000000000000004,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "villain",
+          "position": 438,
+          "score": -3.9000000000000004,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "fun",
+          "position": 449,
+          "score": 3.4499999999999997,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "shame",
+          "position": 539,
+          "score": -3.1500000000000004,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "satisfying",
+          "position": 511,
+          "score": 3.0,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "better",
+          "position": 272,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "interesting",
+          "position": 437,
+          "score": 2.55,
+          "negations": 0,
+          "factor": 1.5
+        }
+      ]
+    },
+    {
+      "id": "review-0004",
+      "row": 4,
+      "true": 0,
+      "predicted": 1,
+      "score": 16.55,
+      "snippet": "man boy love people yet another movies film part no effects no slightly never rather other just another after not much suspense out opening about man while boy screen after actor story audience really story if movie about not so even before movie no opening sequence quite over more more desperate films no time like lead between conclusion cast not about but not bad too much other but still enough story about actor title even seems too strong however plot end about won't another see just no not so heroine even episode because even boring not so bad cannot watched scenes not offensive many other genre if good suspense film out else",
+      "strong_terms": [
+        {
+          "token": "bad",
+          "position": 484,
+          "score": 3.75,
+          "negations": 1,
+          "factor": 1.5
+        },
+        {
+          "token": "bad",
+          "position": 758,
+          "score": 3.75,
+          "negations": 1,
+          "factor": 1.5
+        },
+        {
+          "token": "strong",
+          "position": 573,
+          "score": 3.4499999999999997,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "offensive",
+          "position": 784,
+          "score": 3.0,
+          "negations": 1,
+          "factor": 1.5
+        },
+        {
+          "token": "good",
+          "position": 801,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "boring",
+          "position": 752,
+          "score": -1.9500000000000002,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "love",
+          "position": 19,
+          "score": 1.6,
+          "negations": 0,
+          "factor": 0.5
+        },
+        {
+          "token": "like",
+          "position": 437,
+          "score": 0.75,
+          "negations": 0,
+          "factor": 0.5
+        },
+        {
+          "token": "desperate",
+          "position": 386,
+          "score": -0.65,
+          "negations": 0,
+          "factor": 0.5
+        }
+      ]
+    },
+    {
+      "id": "review-0772",
+      "row": 772,
+      "true": 0,
+      "predicted": 1,
+      "score": 15.774999999999999,
+      "snippet": "start seems inferior even doesn't make about series movies really bad movies few people up really won't show like doesn't sequence time while watching if ain't people protagonist makes movie no beginning poor things like disaster movie time leading wouldn't love because can't cast instead isn't again see more cast love again time poor but down not enough nice doesn't think don't another don't best up not makes down didn't even bother if make funny dialogue like didn't weren't until after off just doesn't work other jokes good even more fun into out into fails but out why through makes just enough until like so dumb action scenes effects look no done sequence about experience fun characters a",
+      "strong_terms": [
+        {
+          "token": "best",
+          "position": 589,
+          "score": 4.800000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "fun",
+          "position": 738,
+          "score": 3.4499999999999997,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "dumb",
+          "position": 869,
+          "score": -3.4499999999999997,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "fun",
+          "position": 938,
+          "score": 3.4499999999999997,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "funny",
+          "position": 672,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "good",
+          "position": 727,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "nice",
+          "position": 476,
+          "score": -2.7,
+          "negations": 1,
+          "factor": 1.5
+        },
+        {
+          "token": "fails",
+          "position": 787,
+          "score": -2.7,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "likes",
+          "position": 962,
+          "score": 2.7,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "interesting",
+          "position": 1001,
+          "score": 2.55,
+          "negations": 0,
+          "factor": 1.5
+        }
+      ]
+    },
+    {
+      "id": "review-0726",
+      "row": 726,
+      "true": 0,
+      "predicted": 1,
+      "score": 0.25000000000000033,
+      "snippet": "can't failure most up same sadly if dismal boring action haven't even time out original plot character off love same woman another hates film better doesn't film better script better roles time film almost hours just feel like film out but worst action film whose film out long time evil most pathetic bad film like think best evil about out but if look script if action film suspense but if look if film even worse sequence almost characters ain't film isn't bad aren't dumb script make indeed excellent but good cannot action movie if really action like but if looking original else",
+      "strong_terms": [
+        {
+          "token": "evil",
+          "position": 286,
+          "score": -5.1,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "evil",
+          "position": 317,
+          "score": -5.1,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "best",
+          "position": 313,
+          "score": 4.800000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "worst",
+          "position": 257,
+          "score": -4.65,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "pathetic",
+          "position": 295,
+          "score": -4.050000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "excellent",
+          "position": 439,
+          "score": 4.050000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "bad",
+          "position": 296,
+          "score": -3.75,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "bad",
+          "position": 407,
+          "score": 3.75,
+          "negations": 1,
+          "factor": 1.5
+        },
+        {
+          "token": "dumb",
+          "position": 419,
+          "score": 3.4499999999999997,
+          "negations": 1,
+          "factor": 1.5
+        },
+        {
+          "token": "worse",
+          "position": 385,
+          "score": -3.1500000000000004,
+          "negations": 0,
+          "factor": 1.5
+        }
+      ]
+    },
+    {
+      "id": "review-0563",
+      "row": 563,
+      "true": 0,
+      "predicted": 1,
+      "score": 18.450000000000003,
+      "snippet": "genre if hadn't watched but superior makes hero rich perfect smart about films over characters other time acting but film think script director characters scenes work like thought but meaningful seems",
+      "strong_terms": [
+        {
+          "token": "perfect",
+          "position": 58,
+          "score": 4.050000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "rich",
+          "position": 54,
+          "score": 3.9000000000000004,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "superior",
+          "position": 31,
+          "score": 3.75,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "smart",
+          "position": 80,
+          "score": 2.55,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "like",
+          "position": 158,
+          "score": 2.25,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "meaningful",
+          "position": 176,
+          "score": 1.9500000000000002,
+          "negations": 0,
+          "factor": 1.5
+        }
+      ]
+    },
+    {
+      "id": "review-0818",
+      "row": 818,
+      "true": 0,
+      "predicted": 1,
+      "score": 32.25,
+      "snippet": "amusement same girl but not even isn't enough screen more film enough title sequence much excited slightly cheers audience too much sound film few minutes through film leading up film film documentary film off into series comedy make fun but director barely up funny joke between much less no minute having no joke another having young into during while joke through during scene much not even funny just role why think funny once weak script think even make movie not can't really can't but works over music too most enthusiastic cheers during off best because rich most into character film young works but out really isn't much having so after just up performance ever but shot setting humor film f",
+      "strong_terms": [
+        {
+          "token": "best",
+          "position": 607,
+          "score": 4.800000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "rich",
+          "position": 613,
+          "score": 3.9000000000000004,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "fun",
+          "position": 327,
+          "score": 3.4499999999999997,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "enthusiastic",
+          "position": 600,
+          "score": 3.3000000000000003,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "cheers",
+          "position": 127,
+          "score": 3.1500000000000004,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "cheers",
+          "position": 601,
+          "score": 3.1500000000000004,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "effective",
+          "position": 793,
+          "score": 3.1500000000000004,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "funny",
+          "position": 345,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "funny",
+          "position": 455,
+          "score": -2.8499999999999996,
+          "negations": 1,
+          "factor": 1.5
+        },
+        {
+          "token": "funny",
+          "position": 499,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        }
+      ]
+    },
+    {
+      "id": "review-0435",
+      "row": 435,
+      "true": 0,
+      "predicted": 1,
+      "score": 9.100000000000001,
+      "snippet": "into rich out however else before clever script plot but director camera work editing pacing film up hour but still more minutes can't about best performance film other cast",
+      "strong_terms": [
+        {
+          "token": "best",
+          "position": 113,
+          "score": 4.800000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "clever",
+          "position": 48,
+          "score": 3.0,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "rich",
+          "position": 13,
+          "score": 1.3,
+          "negations": 0,
+          "factor": 0.5
+        }
+      ]
+    },
+    {
+      "id": "review-0556",
+      "row": 556,
+      "true": 0,
+      "predicted": 1,
+      "score": 21.474999999999998,
+      "snippet": "like romantic comedy but more not off why film waste time things off bad start young woman into mystery man into while out charming man works makes even not very good not just because but because really like other making ridiculous just romantic fantasy joke people most over over again until film time minutes music minutes best scenes movie about film empty if not boring cast good but characters most interesting few funny dialogue character out scenes but really look like through if film better title movie characters plot stupid scene out characters romance think about out very scene action under looking",
+      "strong_terms": [
+        {
+          "token": "best",
+          "position": 373,
+          "score": 4.800000000000001,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "good",
+          "position": 192,
+          "score": 4.2749999999999995,
+          "negations": 0,
+          "factor": 2.25
+        },
+        {
+          "token": "charming",
+          "position": 133,
+          "score": 4.199999999999999,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "bad",
+          "position": 75,
+          "score": -3.75,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "stupid",
+          "position": 582,
+          "score": -3.5999999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "good",
+          "position": 412,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "funny",
+          "position": 452,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "better",
+          "position": 536,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "waste",
+          "position": 65,
+          "score": -2.7,
+          "negations": 0,
+          "factor": 1.5
+        },
+        {
+          "token": "romantic",
+          "position": 312,
+          "score": 2.55,
+          "negations": 0,
+          "factor": 1.5
+        }
+      ]
+    }
+  ],
+  "aspect_examples": [
+    {
+      "text": "The story is excellent but the acting is terrible.",
+      "aspects": {
+        "story": {
+          "score": 1.35,
+          "sentiment": "positive"
+        },
+        "acting": {
+          "score": -3.1500000000000004,
+          "sentiment": "negative"
+        }
+      },
+      "contributions": [
+        {
+          "token": "excellent",
+          "position": 3,
+          "score": 1.35,
+          "negations": 0,
+          "factor": 0.5,
+          "aspect": "story"
+        },
+        {
+          "token": "terrible",
+          "position": 8,
+          "score": -3.1500000000000004,
+          "negations": 0,
+          "factor": 1.5,
+          "aspect": "acting"
+        }
+      ]
+    },
+    {
+      "text": "The music is wonderful. The visual effects are awful.",
+      "aspects": {
+        "sound": {
+          "score": 2.7,
+          "sentiment": "positive"
+        },
+        "visual": {
+          "score": -2.0,
+          "sentiment": "negative"
+        }
+      },
+      "contributions": [
+        {
+          "token": "wonderful",
+          "position": 3,
+          "score": 2.7,
+          "negations": 0,
+          "factor": 1.0,
+          "aspect": "sound"
+        },
+        {
+          "token": "awful",
+          "position": 9,
+          "score": -2.0,
+          "negations": 0,
+          "factor": 1.0,
+          "aspect": "visual"
+        }
+      ]
+    },
+    {
+      "text": "음식은 매우 좋다. 가격은 비싸다.",
+      "aspects": {
+        "food": {
+          "score": 2.8499999999999996,
+          "sentiment": "positive"
+        },
+        "price": {
+          "score": -1.5,
+          "sentiment": "negative"
+        }
+      },
+      "contributions": [
+        {
+          "token": "good",
+          "position": 2,
+          "score": 2.8499999999999996,
+          "negations": 0,
+          "factor": 1.5,
+          "aspect": "food"
+        },
+        {
+          "token": "expensive",
+          "position": 5,
+          "score": -1.5,
+          "negations": 0,
+          "factor": 1.0,
+          "aspect": "price"
+        }
+      ]
+    }
+  ]
+}
